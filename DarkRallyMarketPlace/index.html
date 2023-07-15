@@ -1,1 +1,143 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><title>To Do List</title><script defer="defer" src="main.js"></script></head><body><section class="mainContainer"><h1>Today's To Do</h1><div class="mainList"><div class="upperOfList"><input class="addInput" id="addToDo" placeholder="Add your list ..."></div><ul id="detailedList"></ul><div><button type="button" class="clearAllBtn" id="clearAllBtn">Clear all completed</button></div></div></section></body></html>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        MARKETPLACE
+    </title>
+<script defer src="main.bundle.js"></script></head>
+
+<body>
+    <div>
+        <h1>DARK RALLY MARKETPLACE</h1>
+    </div>
+
+    <div>
+        <label>
+            <button id="connect">Conectar con Metamask</button>
+        </label>
+        <span id="account"></span>        
+    </div>
+
+    <!-- </br>
+    <div>
+        <button id="switch">Cambiar a Mumbai</button>
+    </div> -->
+
+    </br>
+    <h2>Balance and Approve USDC</h2>
+    <div>
+        <label>USDC Balance:</label>
+        <span id="usdcBalance"></span>
+        <button id="usdcUpdateButton">Refresh</button>
+    </div>
+
+
+    <div>
+        <label>USDC Allowance:</label>
+        <span id="usdcAllowance"></span>
+        <button id="usdcAllowanceButton">Refresh</button>
+    </div>
+
+
+    <div>
+        <label for="approveInput">Approve USDC</label>
+        <input type="text" id="approveInput" name="approveInput">
+        <button id="approveButton">Approve</button>
+        <br>
+        <span id="approveError" style="color: red;"></span>
+    </div>
+    </br>
+
+    <!-- <h2>MarketPlace</h2>  -->
+    
+    <h2>Sale Offers: Create, List, Update and Remove</h2>
+
+    <div class="divCreateOffer">
+        <label for="createInput" class="subCategory">* Create a Sale Offer</label><br><br>
+        Token Id:<input type="number" id="createTokenId" name="tokenIdInput" maxLength = "4" placeholder="NFT Id" required>&nbsp
+        Sale Price:<input type="number" id="createPrice" name="priceInput" maxLength = "14" placeholder="with 6 decimals" required>&nbsp
+        Quantity to Sale:<input type="number" id="createQuantity" name="quantityInput"><br>
+        <button id="createOfferButton">Create Offer</button>
+        <br>
+        <span id="createMsg" style="color: red;"></span>        
+
+        <span style="color: blue;">
+        When a sale offer is created, it is also necessary to provide approval 
+        to the MarketPlace Smnart Contract to carry out the transaction at the 
+        time someone buys.
+        </span> <br><br>
+
+        <label for="approveNftInput" class="subCategory">Approve for all NFT</label>
+        <button id="approveNftButton">Approve</button>
+        <br>
+        <span id="approveNftMsg" style="color: red;"></span>
+        <br>
+
+        <label for="rApproveNftInput" class="subCategory">Remove approve for all NFT</label>
+        <button id="rApproveNftButton">Remove Approve</button>
+        <br>
+        <span id="rApproveNftMsg" style="color: red;"></span>
+        <br>
+
+        <div>
+            <label>Have approved this account to all NFTs?: </label>
+            <span id="approveAllowance"></span>
+            <button id="approveAllowanceButton">Refresh</button>
+        </div>
+
+        
+
+    </div>
+
+    <div class="divListSaleOffers">
+        <label class="subCategory">* Get Sale Offers:</label>
+        <!-- <span id="usdcAllowance"></span> -->
+        <button id="getSaleOffersButton">Refresh</button>
+    <!-- </div> -->
+    <br>
+    <span id="listMsg" style="color: red;"></span><br>
+
+    <!-- <div> -->
+        <label>Sale offers:</label>
+        <br>        
+        <ul id="saleOfferstList" style="color: rgb(6, 6, 99);"></ul>
+    </div>  
+
+    <div class="divModifyOffer">
+        <label for="modifyInput" class="subCategory">* Update a Sale Offer</label><br><br>
+        Token Id:<input type="number" id="modifyTokenId" name="tokenIdInput" maxLength = "4" placeholder="NFT Id" required>&nbsp
+        Sale Price:<input type="number" id="modifyPrice" name="priceInput" maxLength = "14" placeholder="with 6 decimals" required>&nbsp
+        Quantity to Sale:<input type="number" id="modifyQuantity" name="quantityInput"><br>
+        <button id="modifyOfferButton">Modify Offer</button>
+        <br>
+        <span id="modifyMsg" style="color: red;"></span>
+    </div>
+
+    <div class="divRemoveOffer">
+        <label for="removeInput" class="subCategory">* Remove a Sale Offer</label><br><br>
+        Token Id:<input type="number" id="removeTokenId" name="tokenIdInput" maxLength = "4" placeholder="NFT Id" required>&nbsp
+        <button id="removeOfferButton">Remove Offer</button>
+        <br>
+        <span id="removeMsg" style="color: red;"></span>
+    </div>    
+    </br>
+
+    <h2>Purchase NFT</h2>
+
+    <div class="divBuyOffer">
+        <label for="buyInput" class="subCategory">* Purchase</label><br><br>
+        Token Id:<input type="number" id="buyTokenId" name="tokenIdInput" maxLength = "4" placeholder="NFT Id" required>&nbsp
+        Owner:<input type="text" id="buyOwner" name="ownerInput" maxLength = "46" placeholder="Address" required>&nbsp <br><br>
+        Price:<input type="number" id="buyPrice" name="priceInput" maxLength = "14" placeholder="with 6 decimals" required>&nbsp
+        Quantity:<input type="number" id="buyQuantity" name="quantityInput"><br>
+        <button id="buyOfferButton">Purchase</button>
+        <br>
+        <span id="buyMsg" style="color: red;"></span>
+    </div>
+       
+
+</body>
+
+</html>
