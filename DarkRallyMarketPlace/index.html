@@ -15,9 +15,10 @@
 
     <div>
         <label>
-            <button id="connect">Conectar con Metamask</button>
+            <button id="connect">Connect with Metamask (wallet in Mumbai!) </button>
         </label>
-        <span id="account"></span>        
+        <span id="account"></span><br>
+        <span id="connectError" style="color: red;"></span>
     </div>
 
     <!-- </br>
@@ -25,29 +26,6 @@
         <button id="switch">Cambiar a Mumbai</button>
     </div> -->
 
-    </br>
-    <h2>Balance and Approve USDC</h2>
-    <div>
-        <label>USDC Balance:</label>
-        <span id="usdcBalance"></span>
-        <button id="usdcUpdateButton">Refresh</button>
-    </div>
-
-
-    <div>
-        <label>USDC Allowance:</label>
-        <span id="usdcAllowance"></span>
-        <button id="usdcAllowanceButton">Refresh</button>
-    </div>
-
-
-    <div>
-        <label for="approveInput">Approve USDC</label>
-        <input type="text" id="approveInput" name="approveInput">
-        <button id="approveButton">Approve</button>
-        <br>
-        <span id="approveError" style="color: red;"></span>
-    </div>
     </br>
 
     <!-- <h2>MarketPlace</h2>  -->
@@ -65,7 +43,7 @@
 
         <span style="color: blue;">
         When a sale offer is created, it is also necessary to provide approval 
-        to the MarketPlace Smnart Contract to carry out the transaction at the 
+        to the MarketPlace Smart Contract to carry out the transaction at the 
         time someone buys.
         </span> <br><br>
 
@@ -125,6 +103,30 @@
     </br>
 
     <h2>Purchase NFT</h2>
+    <h4>Balance and Approve USDC</h4>
+    <div>
+        <label>USDC Balance:</label>
+        <span id="usdcBalance"></span>
+        <button id="usdcUpdateButton">Refresh</button>
+    </div>
+
+
+    <div>
+        <label>USDC Allowance:</label>
+        <span id="usdcAllowance"></span>
+        <button id="usdcAllowanceButton">Refresh</button>
+    </div>
+
+
+    <div>
+        <label for="approveInput">Approve USDC</label>
+        <input type="text" id="approveInput" name="approveInput">
+        <button id="approveButton">Approve</button>
+        <br>
+        <span id="approveError" style="color: red;"></span>
+    </div>
+    </br>
+
 
     <div class="divBuyOffer">
         <label for="buyInput" class="subCategory">* Purchase</label><br><br>
